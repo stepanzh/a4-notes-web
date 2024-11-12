@@ -1,0 +1,76 @@
+{% from "components/note.html" import note, note_read_more_link %}
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Заметки А4 · stepanzh.github.io</title>
+    <meta name="description" content="Короткие заметки по работе с компьютером от опытного пользователя ПК.">
+    <meta name="keywords" content="заметки,программирование,компьютер,лайфхаки,macos,linux,windows,bash,работа в терминале,блог">
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+      (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+      (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+      ym(98876480, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+      });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/98876480" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <section>
+      <header>
+        <h1>Заметки А4 · stepanzh.github.io</h1>
+      </header>
+      <p>Серия коротких заметок от опытного пользователя ПК.</p>
+      <p>Больше &mdash; в телеграмм канале <a href="https://t.me/stepanzh_blog">https://t.me/stepanzh_blog</a>.</p>
+    </section>
+    <main>
+      {% call note(5, 'Kebab case лучший', '2024-11-06') %}
+      <p>Мой выбор — kebab-case! Заметка для тех, кто много работает в терминале. {{ note_read_more_link(tg_post_num_to_link(22)) }}</p>
+      {% endcall %}
+
+      {% call note(4, 'Zotero', '2024-10-30') %}
+      <p>Я использую <a href="https://zotero.org/">Zotero</a> как помощника в исследованиях и документации. Он помогает не потерять научные статьи, книги, лекции, блоги, программы, презы с митингов или отчёты коллег. Zotero для меня это медиатека и браузерные закладки на стероидах. {{ note_read_more_link(tg_post_num_to_link(19)) }}</p>
+      {% endcall %}
+
+      {% call note(3, 'Когда Ctrl-Z не хватает', '2024-10-22', tg_post_num_to_link(15)) %}
+        <p>Вы готовите презентацию, пишете отчёт или код, дизайните обложку, в общем, работаете над проектом не одного дня. В какой-то момент требуется доработка: заказчик попросил, пользователь обнаружил баг или начальнику что-то не понравилось.</p>
+        <p>
+          Вы вносите правки, отправляете на проверку, и получаете ответ «это оставь, а то верни, как было».
+          Как откатить часть изменений?.. {{ note_read_more_link(tg_post_num_to_link(15)) }}
+        </p>
+      {% endcall %}
+
+      {% call note(2, 'Имена файлов для книг, статей и публикаций вообще', '2024-10-15') %}
+        <p>
+          Как именовать книги, статьи и публикации, чтобы потом легко было найти? {{ note_read_more_link(tg_post_num_to_link(13)) }}
+        </p>
+        <p>TL;DR</p>
+        <ul>
+          <li>фамилия - год - часть названия</li>
+          <li>фамилия и фамилия - год - часть названия</li>
+          <li>фамилия и др. - год - часть названия</li>
+        </ul>
+      {% endcall %}
+
+      {% call note(1, 'О формате дат. Даты в именах файлов.', '2024-10-09') %}
+      <p>О датах в именах файлах вообще, для фото и заметок в частности. Как лучше использовать даты в именах файлов. {{ note_read_more_link(tg_post_num_to_link(11)) }}</p>
+      {% endcall %}
+    </main>
+    <footer>
+      <a href="https://t.me/stepanzh_blog" target="_blank">Телеграмм канал</a>
+      <a href="https://stepanzh.github.io/Proportio" target="_blank">Пропорцио &mdash; помощник на кухне</a>
+      <a href="https://stepanzh.github.io" target="_blank">stepanzh.github.io</a>
+      <p>&copy; Захаров С.А., 2024</p>
+    </footer>
+  </body>
+</html>

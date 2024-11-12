@@ -1,0 +1,16 @@
+{% macro note(number, title, datetime, url) %}
+<article class="note">
+  <header class="note-header">
+    <span class="note-header__num">{{ '{:03d}'.format(number) }}</span>
+    <h2 class="note-header__header">{{ title }}</h2>
+    <p class="note-date"><time datetime="{{ datetime }}">{{ datetime }}</time></p>
+  </header>
+  <section class="note-body">
+    {{ caller() }}
+  </section>
+</article>
+{% endmacro %}
+
+{% macro note_read_more_link(url) -%}
+  <a class="note-link-read-more" href="{{ url }}" target="_blank">Читать целиком</a>.
+{%- endmacro %}
