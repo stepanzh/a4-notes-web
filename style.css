@@ -33,6 +33,11 @@ footer {
 }
 /* End of main layout. */
 
+ul, ol {
+  list-style-position: inside;
+  padding-left: 0;
+}
+
 .note-header {
   display: flex;
   flex-direction: column;
